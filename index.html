@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send Email</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h2>Send Email</h2>
+    <div class="popup" id="popup">
+        <h4>Message Sent</h4>
+    </div>
+    <form action="/" method="POST">
+        <label for="recipient">Name:</label>
+        <input type="text" id="recipient" name="name" required><br><br>
+
+        <label for="subject">E-Mail:</label>
+        <input type="email" id="subject" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <input type="submit" id="Send" />
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
