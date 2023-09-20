@@ -29,7 +29,7 @@ app.post("/", function (req, res) {
     from: "dhwajmayur00@gmail.com",
     to: email,
     cc: "dhwajmayur00@gmail.com",
-    subject: "Thanks for giving feedback" + name,
+    subject: "Thanks for giving feedback " + name,
     text: "You sent " + msg,
   };
 
@@ -51,5 +51,3 @@ app.post("/", function (req, res) {
 app.listen(3000, function () {
   console.log("server started at 3000");
 });
-
-// exports.bool = bool;
