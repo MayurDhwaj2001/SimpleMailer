@@ -1,14 +1,15 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const nodemailer = require("nodemailer");
+const path = require("path");
 // const bool = 0;
 const app = express();
-app.use(express.static("css"));
+app.use(express.static("client/css"));
 
 app.use(bodyparser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/client/index.html");
 });
 
 app.post("/", function (req, res) {
@@ -47,7 +48,7 @@ app.post("/", function (req, res) {
   });
   //   }
 });
-
-app.listen(3000, function () {
+const port = process.env.PORT || 3000;
+app.listen(port, function () {
   console.log("server started at 3000");
 });
